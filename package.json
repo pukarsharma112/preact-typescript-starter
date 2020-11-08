@@ -1,6 +1,6 @@
 {
-  "name": "social-media-frontend",
-  "version": "1.0.0",
+  "name": "preact-typescript-starter",
+  "version": "0.0.1",
   "main": "src/index.ts",
   "author": "Pukar Sharma",
   "license": "MIT",
