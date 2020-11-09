@@ -129,14 +129,14 @@ const config = {
         : "[name].chunk.css",
     }),
     new HtmlWebpackPlugin({
-      template: "./assets/template.ejs",
+      template: "./src/template.html",
     }),
   ],
   mode: isProd ? "production" : "development",
   devtool: isProd ? false : "source-map",
   stats: "errors-only",
   devServer: {
-    contentBase: "./assets",
+    contentBase: "./public",
     clientLogLevel: "none",
     host: "0.0.0.0",
     port: 3000,
@@ -154,9 +154,8 @@ if (isProd) {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: "./assets",
+          from: "./public",
           noErrorOnMissing: true,
-          globOptions: { ignore: ["**/template.ejs"] },
         },
       ],
     })
